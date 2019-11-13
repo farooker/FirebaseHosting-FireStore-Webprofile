@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/mini-event-calendar.min.css">
+
+  </head>
+  <style>
+      body{
+          
+          margin-top: 0%;
+          background-color:rgba(22, 22, 23);
+      }
+    
+  .card {
+    background-color: rgba(9, 9, 10);
+    text-align: center;
+    font-family: arial;
+    height: 750px;
+  }
+  .cards {
+   
+    background-color: rgba(9, 9, 10);
+    text-align: center;
+    font-family: arial;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .title {
+    color: white;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card  a {
+    background-color: rgba(9, 9, 10);
+    color: white;
+  }
+  nav a{
+    color: white;
+  }
+ .cards li{
+    background-color: rgba(9, 9, 10);
+    color: white;
+    border-color: white;
+  }
+  nav a:hover{
+    color: orange;
+  }
+img{
+   width:50%;
+    border-radius: 50%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    
+   }
+
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="card">
+            <img src="./images/anthony.jpg" alt="John" >
+            <p class="title">CEO & Farook</p>
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Manage Data</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+            </div>
+
+          </div>
+        </div>
+           <div class="col-md-10" style=" margin-top: 15px;">
+
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-home" style="color: white;" role="tabpanel" aria-labelledby="list-home-list">
+                  <div class="row">
+                      <div class="col-md-3 cards" >
+                          <div class="cards" >
+                              <div class="card-body">
+                                <h2 class="card-title">100</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 cards" >
+                          <div class="cards" >
+                              <div class="card-body">
+                                <h2 class="card-title">100</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 cards" >
+                          <div class="cards" >
+                              <div class="card-body">
+                                <h2 class="card-title">100</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-2 cards" >
+                          <div class="cards">
+                              <div class="card-body">
+                                <h1 class="card-title">10:30</h1>
+                                <h6 class="card-subtitle mb-2 text-muted">CLOCK</h6>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8 cards" >
+                        <h2 style="margin-top: 10px;">Card subtitle</h2>
+                        <canvas id="myChart" height="100"></canvas>
+
+                    </div>
+                    <div class="col-md-3 cards" >
+                        <h2 style="margin-top: 10px;">Card subtitle</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" >
+                              <div class="row">
+                                <div class="col-md-4">
+                                    <img src="./images/anthony.jpg" class="rounded-circle" style="width: 60px;height: 60px;
+                                    margin-top: 5px;">
+                                </div>
+                                <div class="col-md-8" style=" position: absolute;
+                                top: 50%;
+                                left: 60%;
+                                transform: translate(-50%, -50%);">
+                                    Cras justo odio
+                                </div>
+                              </div>
+                            </li>
+                            <li class="list-group-item" >
+                                <div class="row">
+                                  <div class="col-md-4">
+                                      <img src="./images/anthony.jpg" class="rounded-circle" style="width: 60px;height: 60px;
+                                      margin-top: 5px;">
+                                  </div>
+                                  <div class="col-md-8" style=" position: absolute;
+                                  top: 50%;
+                                  left: 60%;
+                                  transform: translate(-50%, -50%);">
+                                      Cras justo odio
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="list-group-item" >
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="./images/anthony.jpg" class="rounded-circle" style="width: 60px;height: 60px;
+                                        margin-top: 5px;">
+                                    </div>
+                                    <div class="col-md-8" style=" position: absolute;
+                                    top: 50%;
+                                    left: 60%;
+                                    transform: translate(-50%, -50%);">
+                                        Cras justo odio
+                                    </div>
+                                  </div>
+                                </li>
+                         </ul>
+
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-8 cards">
+                          <h4 style="margin-top: 10px;">List working</h4>
+                          <table class="table table-dark cards">
+                              <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">First</th>
+                                  <th scope="col">Last</th>
+                                  <th scope="col">Handle</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                      <td>@mdo</td>
+                                    </tr>
+                              </tbody>
+                            </table>
+  
+                      </div>
+                      <div class="col-md-3 cards" >
+                          <h4 style="margin-top: 10px;" class="card-subtitle mb-2 text-muted">Calendar</h4>
+                           <h2>2019-11-10</h2>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="list-profile"  role="tabpanel" style="color: white;" aria-labelledby="list-profile-list">
+                <div class="dropdown" style="margin-left: 80%;margin-right: 10%;">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       + Add
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">+ About</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" href="#">+ Skill</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#ModalAddEducation"  href="#">+ Education</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#ModalAddworing" href="#">+ Experience</a>
+                        <a class="dropdown-item"  data-toggle="modal" data-target="#ModalAddDemo"  href="#">+ Demo</a>
+                      </div>
+                    </div>
+               <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">About</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-Skill" role="tab" aria-controls="nav-profile" aria-selected="false">Skill</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-Education" role="tab" aria-controls="nav-contact" aria-selected="false">Education</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-Experience" role="tab" aria-controls="nav-Experience" aria-selected="false">Experience</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-DemoApp" role="tab" aria-controls="nav-DemoApp" aria-selected="false">Demo App</a>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                      <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <div class="card-body">
+                              <div class="h4 mt-0 title">About</div>
+                              <p id="titlehellow">Hello! I am Farook.</p>
+                              <p id="titleConnent" ></p>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-sm-4"><strong class="text-uppercase" >Age:</strong></div>
+                                <div class="col-sm-8" id="age">24</div>
+                              </div>
+                              <div class="row mt-3">
+                                <div class="col-sm-4"><strong class="text-uppercase" >Email:</strong></div>
+                                <div class="col-sm-8" id="email">panuwatsomjai@gmail.com</div>
+                              </div>
+                              <div class="row mt-3">
+                                <div class="col-sm-4"><strong class="text-uppercase" >Phone:</strong></div>
+                                <div class="col-sm-8" id="tel">+66 0848466529</div>
+                              </div>
+                              <div class="row mt-3">
+                                <div class="col-sm-4"><strong class="text-uppercase" >Address:</strong></div>
+                                <div class="col-sm-8" id="address">115 klongyang koh Lanta Krabi 81120</div>
+                              </div>
+                            </div>
+                          </div>
+                       </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-Skill" role="tabpanel" aria-labelledby="nav-profile-tab">
+  
+                       <table class="table" id="tblSkill" style="margin-top:1%;">
+                         <thead>
+                            <tr>
+                               <th scope="col">Skill</th>
+                               <th scope="col">Percen</th>
+                               <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                      </table>
+                   </div>
+                  <div class="tab-pane fade" id="nav-Education" role="tabpanel" aria-labelledby="nav-contact-tab">
+                  
+                      <table class="table" id="tblEducation" style="margin-top:1%;">
+                          <thead>
+                             <tr>
+                                <th scope="col">ปี</th>
+                                <th scope="col">ระดับ</th>
+                                <th scope="col">สาขา/สายการเรียน</th>
+                                <th scope="col">Action</th>
+                             </tr>
+                         </thead>
+                       </table>
+                  </div>
+                  <div class="tab-pane fade" id="nav-Experience" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                        <table class="table" id="tblExperience" style="margin-top:1%;">
+                            <thead>
+                               <tr>
+                                  <th scope="col">ปี</th>
+                                  <th scope="col">บริษัท</th>
+                                  <th scope="col">รายละเอียด</th>
+                                  <th scope="col">Action</th>
+                               </tr>
+                           </thead>
+                         </table>
+                    </div>
+                    <div class="tab-pane fade" id="nav-DemoApp" role="tabpanel" aria-labelledby="nav-contact-tab">
+                       
+                        <table class="table" id="tblDemoApp" style="margin-top:1%;">
+                            <thead>
+                               <tr>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Discription</th>
+                                  <th scope="col">URL image</th>
+                                  <th scope="col">Action</th>
+                               </tr>
+                           </thead>
+                         </table>
+                    </div>
+                </div>
+            </div>
+              </div>
+              <div class="tab-pane fade" id="list-messages" role="tabpanel" style="color: white;" aria-labelledby="list-messages-list">...</div>
+              <div class="tab-pane fade" id="list-settings" role="tabpanel" style="color: white;" varia-labelledby="list-settings-list">...</div>
+            </div>
+       
+        
+               
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Manage Skill</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form id="FromAddSkill"> 
+                                <div class="form-group row">
+                                  <label for="staticEmail" class="col-sm-2 col-form-label">Skill</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="txtSkill" placeholder="Skill">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="inputPassword" class="col-sm-2 col-form-label">Percen</label>
+                                  <div class="col-sm-10">
+                                    <input type="number" class="form-control" name="txtPercen" placeholder="%">
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save To DB</button>
+                                  </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                <!-- Modal add Education -->
+                <div class="modal fade" id="ModalAddEducation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Manage Education</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form id="FromAddEducation"> 
+                                <div class="form-group row">
+                                  <label for="staticEmail" class="col-sm-2 col-form-label">ปี</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="txtYear" placeholder="ปี">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="inputPassword" class="col-sm-2 col-form-label">ระดับการเรียน</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="txtClass" placeholder="ระดับการเรียน">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">สาขา/สายการเรียน</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control" name="txtSchool" placeholder="สาขาวิชาเรียน/สายการเรียน">
+                                    </div>
+                                  </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save To DB</button>
+                                  </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- Modal add Working -->
+                <div class="modal fade" id="ModalAddworing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Manage Working</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form id="FromAddExperience"> 
+                                <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Year</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="txtYear" placeholder="ปี">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="inputPassword" class="col-sm-2 col-form-label">สถานที่ทำงาน</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="txtworking" placeholder="สถานที่ทำงาน">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">รายละเอียด</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control" name="txtDisiption" placeholder="รายละเอียด">
+                                    </div>
+                                  </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save To DB</button>
+                                  </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+               </div>
+                      <!-- Modal add demo app-->
+                      <div class="modal fade" id="ModalAddDemo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Manage App Demo</h5>
+                              </div>
+                              <div class="modal-body">
+                                  <form id="FromAddDemoApp"> 
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-2 col-form-label">App Name</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="P_Name" placeholder="Project Name">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="inputPassword" class="col-sm-2 col-form-label">App Discription</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="P_Detial" placeholder="Discription">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-2 col-form-label">App Type</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="P_Type" placeholder="App Type">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-2 col-form-label">URL DEMO</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="P_Demo" placeholder="URL DEMO">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-2 col-form-label">URL Simple</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="P_simple" placeholder="URL Simple">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <input type="file" accept="image/*" capture="camera" id="cameraInput">
+                                        </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button type="submit" class="btn btn-primary">Save To DB</button>
+                                        </div>
+                                    </form>
+                              </div>
+                            </div>
+                          </div>
+                     </div>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var config = {
+    apiKey: "AIzaSyCyvF8JMgvKYLgL-YztefYl-DCgIuaZ16c",
+    authDomain: "xsion-93b36.firebaseapp.com",
+    databaseURL: "https://xsion-93b36.firebaseio.com",
+    projectId: "xsion-93b36",
+    storageBucket: "xsion-93b36.appspot.com",
+    messagingSenderId: "932514292057",
+    appId: "1:932514292057:web:d891560cea44e60e922c48",
+    measurementId: "G-2HQEYFFG3V"
+  };
+  firebase.initializeApp(config);
+  let db = firebase.firestore();  
+ </script>
+  
+ <script src="./App.js"></script>
+ <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+// The type of chart we want to create
+type: 'line',
+
+// The data for our dataset
+data: {
+labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+datasets: [{
+label: 'My First dataset',
+borderColor: 'rgb(89, 0, 179)',
+data: [0, 10, 5, 2, 20, 30, 45]
+}]
+},
+
+// Configuration options go here
+options: {}
+});
+  </script>
+  <!--
+ <script src="./js/Tbl_Skill.js"></script>
+ <script src="./js/Tbl_Education.js"></script>
+ <script src="./js/Tbl_Experience.js"></script>
+ <script src="./js/Tbl_Project.js"></script>
+-->
+</html>
